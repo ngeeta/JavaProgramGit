@@ -1,4 +1,4 @@
-package JavaPractice;
+package javaProgram;
 
 public class AddIntegerFromString {
  public void isDigit(String s,int sum) {
@@ -13,7 +13,13 @@ public class AddIntegerFromString {
  }
 	public void regex(String s,int sum) {
 		String n=s.replaceAll("[^0-9]", "");
-		System.out.println(n);
+		char c[]=n.toCharArray();
+		for(char r:c) {
+			sum=sum+Integer.parseInt(String.valueOf(r));
+		}
+		
+		 System.out.println("Addition of "+s +" is "+sum);
+
 	}
 	public static void main(String[] args) {
 		AddIntegerFromString a=new AddIntegerFromString();
@@ -24,3 +30,4 @@ public class AddIntegerFromString {
 	}
 
 }
+
