@@ -57,8 +57,11 @@ public class ArrayListManipulation {
 		}
 	}
 
-	public void removeDuplicateFromArray(List<String> stringList) {
+	public void removeDuplicateFromArray() {
+		List<String> stringList = new ArrayList<String>(Arrays.asList("A", "B", "A", "C", "A", "D", "X",
+				"A"));
 		System.out.println("Original list is:: ");
+		
 		System.out.println(stringList);
 		ArrayList<String> dup=new ArrayList<String>();
 		ArrayList<String> unq=new ArrayList<String>();
@@ -76,11 +79,7 @@ public class ArrayListManipulation {
 		}
 		System.out.println("After removing");
 		System.out.println(dup);
-		System.out.println(unq);
-
-
-		
-		
+		System.out.println(unq);		
 	}
 	public void findDuplicateFromArray(List<String> stringList) {
 		System.out.println("Original list is:: ");
@@ -113,7 +112,7 @@ mp.subList(stringList);
 		mp.joinTwoArray(stringList);
 
 		System.out.println("-----------------removeDuplicateFromArray-----------");
-mp.removeDuplicateFromArray(stringList);
+mp.removeDuplicateFromArray();
 	}
 
 }
